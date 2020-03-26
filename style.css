@@ -42,6 +42,7 @@ ul.navbarlist li img {
 }
 
 ul.navbarlist a {
+	display: block;
 	color: #4A455C;
 	text-align: center;
 	text-decoration: none;
@@ -476,6 +477,7 @@ ul.social-media-footer li {
 }
 
 ul.social-media-footer a {
+	display: block;
 	color: white;
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
