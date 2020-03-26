@@ -11,7 +11,10 @@ body, html {
   	display: -ms-flexbox;
   	display: -webkit-flex;
 	flex-direction: column;
-}
+	-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
 
 /* NAV BAR */
 nav {
@@ -68,6 +71,10 @@ ul.navbarlist li a:hover {
   	display: -ms-flexbox;
   	display: -webkit-flex;
 	flex-direction: column;
+	-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
 	align-items: center;
     -webkit-box-align: center;
 	-moz-box-align: center;
@@ -87,6 +94,10 @@ ul.navbarlist li a:hover {
   	display: -ms-flexbox;
   	display: -webkit-flex;
 	flex-direction: column;
+	-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     float: none;
     width: 100%;
     padding: 1px;
@@ -390,6 +401,10 @@ ul.navbarlist li a:hover {
   	display: -ms-flexbox;
   	display: -webkit-flex;
 	flex-direction: column;
+	-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
 	background: #4A455C;
     padding: 20px 10px 31px 10px;
     position: absolute;
@@ -413,6 +428,10 @@ h3.mailing {
   	display: -ms-flexbox;
   	display: -webkit-flex;
 	flex-direction: column;
+	-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
 	padding: 0px 20px 0px 20px;
 }
 
@@ -452,6 +471,8 @@ h3.mailing {
   	display: -ms-flexbox;
   	display: -webkit-flex;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 	color: #FFFFFF;
     margin-bottom: .8rem;
     font-family: 'Montserrat', sans-serif;
@@ -467,6 +488,8 @@ ul.social-media-footer {
 ul.social-media-footer li {
 	display: inline-flex;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 	padding: 20px 10px 20px 10px;
 	justify-content: flex-start;
     align-items: flex-start;
@@ -537,6 +560,10 @@ ul.footer-links a {
   		display: -ms-flexbox;
   		display: -webkit-flex;
 		flex-direction: column;
+		-webkit-box-orient: vertical;
+    	-webkit-box-direction: normal;
+    	-webkit-flex-direction: column;
+    	-ms-flex-direction: column;
 		align-items: flex-start;
 		-webkit-box-align: start;
 		-moz-box-align: start;
