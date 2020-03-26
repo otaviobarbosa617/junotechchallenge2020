@@ -272,6 +272,7 @@ ul.navbarlist li a:hover {
 		float: right;
 		transform: translate(54%, -560%);
 		-ms-transform: translate(54%, -560%);
+		-webkit-transform: translate(54%, -560%);
 		background-color: #D64C31;
 		color: white;
 		font-size: 12px;
@@ -577,7 +578,7 @@ ul.footer-links a {
     	-webkit-flex-direction: column;
     	-ms-flex-direction: column;
 		align-items: flex-start;
-		-webkit-align-items: flex-start
+		-webkit-align-items: flex-start;
 		-webkit-box-align: start;
 		-moz-box-align: start;
 		-ms-flex-align: start;
