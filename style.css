@@ -32,26 +32,24 @@ nav {
 	-ms-flex-align: center;
 	-webkit-align-items: center;
 	justify-content: flex-start;
-	-webkit-justify-content: flex-start
-	order: 1;
-
+	-webkit-justify-content: flex-start;
 }
 
 ul.navbarlist {
 	  list-style-type: none;
 	  padding: 0;
-}
+	}
 
 ul.navbarlist li {
 	display: inline-block;
 	vertical-align: middle;
 	padding: 20px 20px 0px 20px;
-}
+	}
 
 ul.navbarlist li img {
 	width: 276px;
 	padding: 0px;
-}
+	}
 
 ul.navbarlist a {
 	display: block;
@@ -61,7 +59,6 @@ ul.navbarlist a {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1em;
 	line-height: 45px;
-
 }
 
 ul.navbarlist li a:hover {
@@ -73,53 +70,50 @@ ul.navbarlist li a:hover {
 
 @media screen and (min-width:200px) and (max-width: 1140px) {
 	nav {
-	display: flex;
-	display: -webkit-box;
-  	display: -moz-box;
-  	display: -ms-flexbox;
-  	display: -webkit-flex;
-	flex-direction: column;
-	-webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-	align-items: center;
-    -webkit-box-align: center;
-	-moz-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	justify-content: center;
+		display: block;
+		align-items: center;
+	    -webkit-box-align: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		justify-content: center;
+
+	}
+
+ 	ul.navbarlist li img {
+		width: 50%;
+		align-items: center;
+	    -webkit-box-align: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		justify-content: center;
+	}
+
+	ul.navbarlist {
+		padding-left: 20px;
+	}
+
+  	ul.navbarlist li {
+	  	display: block;
+	    float: none;
+	    width: fit-content;
+	    padding: 1px;
+	    justify-content: center;
+	    align-items: center;
+	    -webkit-box-align: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		justify-content: center;
+	 }
+ 
+  	ul.navbarlist a {
+	    padding: 2px;
+	    font-size: 0.8em;
+	    line-height: 1.7em;
+	}
 }
-
- ul.navbarlist li img {
-	width: 50%;
-}
-
-  ul.navbarlist li {
-  	display: flex;
-  	display: -webkit-box;
-  	display: -moz-box;
-  	display: -ms-flexbox;
-  	display: -webkit-flex;
-	flex-direction: column;
-	-webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    float: none;
-    width: 100%;
-    padding: 1px;
-    justify-content: center;
-    align-items: center;
-  }
-  ul.navbarlist a {
-    padding: 2px;
-    font-size: 0.8em;
-    line-height: 1.7em;
-  }
-}
-
-
 
 /* COVER AND ORANGE BOX */
 
@@ -174,14 +168,20 @@ ul.navbarlist li a:hover {
 
 /* Responsive cover and orange box */
 
+/* Based on grader's feedback, I've decided to drop everything down (columns style) 
+instead of following the visual guide to represent on mobile exactly how it should be on a larger window as the guide shows. */
+
 /* Extra small devices (phones, 600px and down) - Query reference from w3c schools  */
 @media screen and (max-width: 600px) {
+	.hero-wrapper{
+		padding: 20px 20px 20px 20px;
+	}
 	.hero-image {
 		display: block;
 	}
 	.hero-text {
 		position: inherit;
-		width: 89%;
+		width: unset;
 	}
 	.hero-text h1 {
 		font-size: 10vw;
@@ -232,7 +232,7 @@ ul.navbarlist li a:hover {
 		margin-top: -15px;
 	}
 	.hero-text p {
-		font-size: 2.2vh;
+		font-size: 1.6vh;
 		padding: 0px 30px 0px 30px;
 		margin-top: 5px;
 	}
@@ -285,6 +285,7 @@ ul.navbarlist li a:hover {
 	float: right;
 	transform: translate(-362%, -55%);
 	-ms-transform: translate(-362%, -55%);
+	-webkit-transform: translate(-362%, -55%);
 	background-color: #D64C31;
 	color: white;
 	font-size: 22px;
@@ -294,6 +295,11 @@ ul.navbarlist li a:hover {
 	text-align: center;
 	text-decoration: none;
 }
+
+.welcome-image .slider:hover {
+		background-color: white;
+		color: #D64C31;
+	}
 
 .welcome-image img {
 	width: 80%;
@@ -317,29 +323,39 @@ ul.navbarlist li a:hover {
 
 /* Responsive Welcome and buttons */
 
-@media all and (max-width: 700px) {
+
+/* Based on grader's feedback, I've decided to drop everything down (columns style) 
+instead of following the visual guide to represent on mobile exactly how it should be on a larger window as the guide shows. */
+
+
+/* Extra small devices (phones, 600px and down) - Query reference from w3c schools  */
+@media screen and (max-width: 600px) {
 	.welcome-section-wrapper {
 		padding: 20px 0px 20px 20px;
 	}
-
 	.welcome-wrapper {
 		padding: 40px 20px 20px 20px;
+		display: block;
 	}
 	.welcome-wrapper h1 {
-		font-size: 0.8rem;
+		font-size: 8vw;
 		padding: 0px 0px 10px 0px;
 		margin-top: -15px;
 	}
 
+	.welcome-image {
+		display: block;
+	}
+
 	.welcome-image .slider {
 		float: right;
-		transform: translate(54%, -560%);
-		-ms-transform: translate(54%, -560%);
-		-webkit-transform: translate(54%, -560%);
+		transform: translate(-29%, 3%);
+		-ms-transform: translate(-29%, 3%);
+		-webkit-transform: translate(-29%, 3%);
 		background-color: #D64C31;
 		color: white;
-		font-size: 12px;
-		padding: 8px 8px;
+		font-size: 4vw;
+		padding: 16px 16px;
 		border: none;
 		cursor: pointer;
 		text-align: center;
@@ -350,25 +366,227 @@ ul.navbarlist li a:hover {
 		width: 100%;
 	}
 	.welcome-image p {
-		font-size: 0.3rem;
+		font-size: 2vw;
 		padding: 0px 0px 0px 0px;
 		margin-top: 5px;
 	}
 	.welcome-image h2 {
-		font-size: 0.7rem;
+		font-size: 6vw;
 		padding: 0px 0px 0px 0px;
 		margin-top: 22px;
 	}
 }
 
+
+/* Small devices (portrait tablets and large phones, 600px and up) - Query reference from w3c schools */
+@media screen and (min-width: 600px) {
+	.welcome-section-wrapper {
+		padding: 20px 0px 20px 20px;
+	}
+	.welcome-wrapper {
+		padding: 40px 20px 20px 20px;
+		display: block;
+	}
+	.welcome-wrapper h1 {
+		font-size: 6vw;
+		padding: 0px 0px 10px 0px;
+		margin-top: -15px;
+	}
+
+	.welcome-image {
+		display: block;
+	}
+
+	.welcome-image .slider {
+		float: right;
+		transform: translate(-29%, 0%);
+		-ms-transform: translate(-29%, 0%);
+		-webkit-transform: translate(-29%, 0%);
+		background-color: #D64C31;
+		color: white;
+		font-size: 4vw;
+		padding: 16px 16px;
+		border: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.welcome-image img {
+		width: 100%;
+	}
+	.welcome-image p {
+		font-size: 2vw;
+		padding: 0px 0px 0px 0px;
+		margin-top: 5px;
+	}
+	.welcome-image h2 {
+		font-size: 6vw;
+		padding: 0px 0px 0px 0px;
+		margin-top: 22px;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) Query reference from w3c schools  */
+@media screen and (min-width: 768px) {
+	.welcome-section-wrapper {
+		padding: 20px 0px 20px 20px;
+	}
+
+	.welcome-wrapper {
+		padding: 40px 20px 20px 20px;
+		display: block;
+	}
+	.welcome-wrapper h1 {
+		font-size: 6vw;
+		padding: 0px 0px 10px 0px;
+		margin-top: -15px;
+	}
+
+	.welcome-image {
+		display: block;
+	}
+
+	.welcome-image .slider {
+		float: right;
+		transform: translate(1%, -560%);
+		-ms-transform: translate(1%, -560%);
+		-webkit-transform: translate(1%, -560%);
+		background-color: #D64C31;
+		color: white;
+		font-size: 4vw;
+		padding: 16px 16px;
+		border: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.welcome-image img {
+		width: 100%;
+	}
+	.welcome-image p {
+		font-size: 1.5vw;
+		padding: 0px 0px 0px 0px;
+		margin-top: 5px;
+	}
+	.welcome-image h2 {
+		font-size: 4vw;
+		padding: 0px 0px 0px 0px;
+		margin-top: 22px;
+	}
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) Query reference from w3c schools  */
+@media screen and (min-width: 992px) {
+	.welcome-section-wrapper {
+		padding: 20px 0px 20px 20px;
+	}
+	.welcome-wrapper {
+		padding: 40px 20px 20px 20px;
+		display: block;
+	}
+	.welcome-wrapper h1 {
+		font-size: 6vw;
+		padding: 0px 0px 10px 0px;
+		margin-top: -15px;
+	}
+
+	.welcome-image {
+		display: block;
+	}
+
+	.welcome-image .slider {
+		float: right;
+		transform: translate(1%, -630%);
+		-ms-transform: translate(1%, -630%);
+		-webkit-transform: translate(1%, -630%);
+		background-color: #D64C31;
+		color: white;
+		font-size: 4vw;
+		padding: 16px 16px;
+		border: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.welcome-image img {
+		width: 100%;
+	}
+	.welcome-image p {
+		font-size: 1.5vw;
+		padding: 0px 0px 0px 0px;
+		margin-top: 5px;
+	}
+	.welcome-image h2 {
+		font-size: 4vw;
+		padding: 0px 0px 0px 0px;
+		margin-top: 22px;
+	}
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up)  Query reference from w3c schools  */
+@media screen and (min-width: 1200px) {
+	.welcome-section-wrapper {
+		padding: 20px 0px 20px 20px;
+	}
+	.welcome-wrapper {
+		padding: 40px 20px 20px 20px;
+		display: block;
+	}
+	.welcome-wrapper h1 {
+		font-size: 6vw;
+		padding: 0px 0px 10px 0px;
+		margin-top: -15px;
+	}
+
+	.welcome-image {
+		display: block;
+	}
+
+	.welcome-image .slider {
+		float: right;
+		transform: translate(1%, -630%);
+		-ms-transform: translate(1%, -630%);
+		-webkit-transform: translate(1%, -630%);
+		background-color: #D64C31;
+		color: white;
+		font-size: 4vw;
+		padding: 16px 16px;
+		border: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.welcome-image img {
+		width: 100%;
+	}
+	.welcome-image p {
+		font-size: 2vw;
+		padding: 0px 0px 0px 0px;
+		margin-top: 5px;
+	}
+	.welcome-image h2 {
+		font-size: 4vw;
+		padding: 0px 0px 0px 0px;
+		margin-top: 22px;
+	}
+}
+
+
 /* Course grid */
 
 .courses-grid-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(388px, 388px));
+  grid-template-columns: repeat(auto-fit, minmax(288px, 388px));
   grid-gap: 40px;
   padding: 20px 20px 40px 20px;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .grid-elements {
@@ -381,6 +599,10 @@ ul.navbarlist li a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #FFF0E7;
+}
+
+.grid-elements-img img {
+	max-width: 100%;
 }
 
 .grid-elements-content {
@@ -414,23 +636,27 @@ ul.navbarlist li a:hover {
 
 /* Responsive course grid */
 
-@media all and (min-width: 200px){
+@media all and (min-width: 200px) {
 	.courses-grid-main {
 	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(388px, 388px));
+	  grid-template-columns: repeat(auto-fit, minmax(288px, 388px));
 	  grid-gap: 10px;
 	  padding: 10px;
 	  justify-content: center;
+	}
+	
+	.grid-elements-img img{
+		max-width: 100%;
 	}
 }
 
  /* Footer */
 
- footer {
+footer {
  	display: inline-block;
  	background: #D64C31;
  	padding-top: 1rem;
- }
+}
 
  .footer-elements-wrapper {
  	box-sizing: border-box;
@@ -478,7 +704,6 @@ ul.navbarlist li a:hover {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex:0 1 200px; 
 	background: #4A455C;
     padding: 20px 10px 31px 10px;
     position: absolute;
@@ -506,7 +731,6 @@ h3.mailing {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-shrink: 2;
 	padding: 0px 20px 0px 20px;
 }
 
@@ -529,7 +753,6 @@ h3.mailing {
 	-moz-box-align: center;
 	-ms-flex-align: center;
 	-webkit-align-items: center;
-	flex-shrink: 2;
     cursor: pointer;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -541,6 +764,11 @@ h3.mailing {
     border-radius: 0.3em;  
 }
 
+.newsletter button:hover {
+	background: #D64C31;
+	color: white;
+}
+
 .newsletter p {
 	display: flex;
 	display: -webkit-box;
@@ -550,7 +778,6 @@ h3.mailing {
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-shrink: 2;
 	color: #FFFFFF;
     margin-bottom: .8rem;
     font-family: 'Montserrat', sans-serif;
@@ -587,6 +814,10 @@ ul.social-media-footer a {
 	text-decoration: none;
 }
 
+ul.social-media-footer a:hover {
+	color: #D64C31;
+}
+
 .footer-links-wrapper {
     margin: 10px 0px 2px 20px;
     width: 50%;
@@ -619,6 +850,11 @@ ul.footer-links a {
 	text-decoration: none;
 }
 
+ul.footer-links a:hover {
+	background: white;
+	color: #D64C31;
+}
+
 .copyright {
 	color: #FFFFFF;
 	font-family: 'Montserrat', sans-serif;
@@ -633,68 +869,101 @@ ul.footer-links a {
 
 /* Responsive Footer */
 
-@media screen and (min-width:200px) and (max-width: 1140px) {
-	footer, .footer-elements-wrapper, .inner-wrapper {
-		display: flex;
-		display: -webkit-box;
-  		display: -moz-box;
-  		display: -ms-flexbox;
-  		display: -webkit-flex;
-		flex-direction: column;
-		-webkit-box-orient: vertical;
-    	-webkit-box-direction: normal;
-    	-webkit-flex-direction: column;
-    	-ms-flex-direction: column;
-		align-items: flex-start;
-		-webkit-align-items: flex-start;
-		-webkit-box-align: start;
-		-moz-box-align: start;
-		-ms-flex-align: start;
-		-webkit-align-items: start;
-		justify-content: center;
-		-webkit-justify-content: center;
-		padding: 10px 0px 0px 0px;
+/* Based on grader's feedback, I've decided to drop everything down (columns style) 
+instead of following the visual guide to represent on mobile exactly how it should be on a larger window as the guide shows. */
+
+
+/* Extra small devices (phones, 600px and down) - Query reference from w3c schools  */
+@media screen and (max-width: 600px) {
+	footer {
+ 		display: block;
+ 	}
+
+	 .footer-elements-wrapper {
+	 	display: block;
+	 	box-sizing: border-box;
+	 }
+
+	.inner-wrapper {
+		display: block;
+		position: unset;
+	    margin-left: auto;
 	}
 
 	.footer-logo-juno {
-		order: 2;
-		-webkit-box-ordinal-group: 2;
-		-moz-box-ordinal-group: 2;
-		-ms-flex-order: 2; 
-		-webkit-order: 2;
-		padding: 0px;
-	}
-
-	.inner-wrapper > h3 {
-		order: 3;
-		-webkit-box-ordinal-group: 3;
-		-moz-box-ordinal-group: 3;
-		-ms-flex-order: 3; 
-		-webkit-order: 3;
-		margin: 10px 0px 10px 0px;
+		width: 204px;
+	    padding-left: 20px;
 	}
 
 	.inner-wrapper span {
-		order: 4;
-		-webkit-box-ordinal-group: 4;
-		-moz-box-ordinal-group: 4;
-		-ms-flex-order: 4; 
-		-webkit-order: 4;
-		padding: 0px;
-		margin: 0px 0px 10px 0px;
+	    font-size: 1em;
+	    line-height: 1em;
+	    margin: auto;
+	    margin-left: 20px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: unset;
 	}
 
 	.newsletter {
-		order: 1;
-		-webkit-box-ordinal-group: 1;
-		-moz-box-ordinal-group: 1;
-		-ms-flex-order: 1; 
-		-webkit-order: 1;
-		position: relative;
+		display: block;
+	    padding: 20px 10px 31px 10px;
+	    position: unset;
+	    top: unset;
+	    right: unset;
+	    z-index: unset;
+	    margin-top: 10px;
+	}
+
+	h3.mailing {
+		font-size: 30px;
+		margin: 0px 0px 20px 20px;
+	}
+
+	.newsletter form {
+		padding: 0px 20px 0px 20px;
+	}
+
+	.newsletter input {
+	    margin-bottom: 0.5rem;
+	    font-size: 1rem;
+	    line-height: 1.8rem;
+	    padding: 0.5rem;
+	    border: none;
+	    border-radius: 0.3em;
+	}
+
+	.newsletter button {
+	    font-size: 1rem;
+	    padding: 10px;
+	    height: 40px;
+	    width: 100px;
+	    border-radius: 0.3em;  
+	}
+
+	.newsletter p {
+	    margin-bottom: .8rem;
+	    font-size: 1em;
+	    padding: 0px 20px 0px 20px;
+	}
+
+	ul.social-media-footer {
+		list-style-type: none;
+		margin-left: -30px;
+	}
+
+	ul.social-media-footer li {
+		padding: 20px 10px 20px 10px;
+	}
+
+	ul.social-media-footer a {
+		display: block;
 	}
 
 	.footer-links-wrapper {
-		margin: 0px;
+	    margin: 10px 0px 2px 20px;
+	    width: 50%;
+	    text-align: left;
 	}
 
 	ul.footer-links {
@@ -705,7 +974,569 @@ ul.footer-links a {
 
 	ul.footer-links li {
 		display: block;
-		padding: 10px 10px 10px 20px;
+		padding: 20px 20px 20px 20px;
+	}
+
+	ul.footer-links a {
+		font-size: 1.2em;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.copyright {
+	    margin: 10px 0px 20px 37px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) - Query reference from w3c schools */
+@media screen and (min-width: 600px) {
+	footer {
+ 		display: block;
+	}
+
+ 	.footer-elements-wrapper {
+ 		display: block;
+ 		box-sizing: border-box;
+ 	}
+
+	.inner-wrapper {
+		display: block;
+		position: unset;
+    	margin-left: auto;
+	}
+
+	.footer-logo-juno {
+		width: 204px;
+    	padding-left: 20px;
+	}
+
+	.inner-wrapper span {
+    	font-size: 1em;
+    	line-height: 1em;
+    	margin: auto;
+    	margin-left: 20px;
+    	padding-top: 10px;
+    	padding-bottom: 20px;
+    	width: unset;
+	}
+
+	.newsletter {
+		display: block;
+    	padding: 20px 10px 31px 10px;
+    	position: unset;
+    	top: unset;
+    	right: unset;
+    	z-index: unset;
+    	margin-top: 10px;
+	}
+
+	h3.mailing {
+		font-size: 30px;
+		margin: 0px 0px 20px 20px;
+	}
+
+	.newsletter form {
+		padding: 0px 20px 0px 20px;
+	}
+
+	.newsletter input {
+    	margin-bottom: 0.5rem;
+    	font-size: 1rem;
+    	line-height: 1.8rem;
+    	padding: 0.5rem;
+    	border: none;
+   		border-radius: 0.3em;
+	}
+
+	.newsletter button {
+	    font-size: 1rem;
+	    padding: 10px;
+	    height: 40px;
+	    width: 100px;
+	    border-radius: 0.3em;  
+	}
+
+	.newsletter p {
+	    margin-bottom: .8rem;
+	    font-size: 1em;
+	    padding: 0px 20px 0px 20px;
+	}
+
+	ul.social-media-footer {
+		list-style-type: none;
+		margin-left: -30px;
+	}
+
+	ul.social-media-footer li {
+		padding: 20px 10px 20px 10px;
+	}
+
+	ul.social-media-footer a {
+		display: block;
+	}
+
+	.footer-links-wrapper {
+	    margin: 10px 0px 2px 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+	ul.footer-links {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	ul.footer-links li {
+		display: block;
+		padding: 20px 20px 20px 20px;
+	}
+
+	ul.footer-links a {
+		font-size: 1.2em;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.copyright {
+	    margin: 10px 0px 20px 37px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) Query reference from w3c schools  */
+@media screen and (min-width: 768px) {
+	footer {
+ 		display: block;
+	}
+
+	.footer-elements-wrapper {
+		display: block;
+	 	box-sizing: border-box;
+	}
+
+	.inner-wrapper {
+		display: block;
+		position: unset;
+	    margin-left: auto;
+	}
+
+	.footer-logo-juno {
+		width: 204px;
+	    padding-left: 20px;
+	}
+
+	.inner-wrapper span {
+	    font-size: 1em;
+	    line-height: 1em;
+	    margin: auto;
+	    margin-left: 20px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: unset;
+	}
+
+	.newsletter {
+		display: block;
+	    padding: 20px 10px 31px 10px;
+	    position: unset;
+	    top: unset;
+	    right: unset;
+	    z-index: unset;
+	    margin-top: 10px;
+	}
+
+	h3.mailing {
+		font-size: 30px;
+		margin: 0px 0px 20px 20px;
+	}
+
+	.newsletter form {
+		padding: 0px 20px 0px 20px;
+	}
+
+	.newsletter input {
+	    margin-bottom: 0.5rem;
+	    font-size: 1rem;
+	    line-height: 1.8rem;
+	    padding: 0.5rem;
+	    border: none;
+	    border-radius: 0.3em;
+	}
+
+	.newsletter button {
+	    font-size: 1rem;
+	    padding: 10px;
+	    height: 40px;
+	    width: 100px;
+	    border-radius: 0.3em;  
+	}
+
+	.newsletter p {
+	    margin-bottom: .8rem;
+	    font-size: 1em;
+	    padding: 0px 20px 0px 20px;
+	}
+
+	ul.social-media-footer {
+		list-style-type: none;
+		margin-left: -30px;
+	}
+
+	ul.social-media-footer li {
+		padding: 20px 10px 20px 10px;
+	}
+
+	ul.social-media-footer a {
+		display: block;
+	}
+
+	.footer-links-wrapper {
+	    margin: 10px 0px 2px 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+	ul.footer-links {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	ul.footer-links li {
+		display: inline-block;
+		padding: 20px 20px 20px 20px;
+	}
+
+	ul.footer-links a {
+		font-size: 1.2em;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.copyright {
+	    margin: 10px 0px 20px 37px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) Query reference from w3c schools  */
+@media screen and (max-width: 1304px) {
+	footer {
+ 		display: block;
+	}
+
+	.footer-elements-wrapper {
+		display: block;
+	 	box-sizing: border-box;
+	}
+
+	.inner-wrapper {
+		display: block;
+		position: unset;
+	    margin-left: auto;
+	}
+
+	.footer-logo-juno {
+		width: 204px;
+	    padding-left: 20px;
+	}
+
+	.inner-wrapper span {
+	    font-size: 1em;
+	    line-height: 1em;
+	    margin: auto;
+	    margin-left: 20px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: auto;
+	}
+
+	.newsletter {
+		display: block;
+	    padding: 20px 10px 31px 10px;
+	    position: unset;
+	    top: unset;
+	    right: unset;
+	    z-index: unset;
+	    margin-top: 10px;
+	}
+
+	h3.mailing {
+		font-size: 30px;
+		margin: 0px 0px 20px 20px;
+	}
+
+	.newsletter form {
+		padding: 0px 20px 0px 20px;
+	}
+
+	.newsletter input {
+	    margin-bottom: 0.5rem;
+	    font-size: 1rem;
+	    line-height: 1.8rem;
+	    padding: 0.5rem;
+	    border: none;
+	    border-radius: 0.3em;
+	}
+
+	.newsletter button {
+	    font-size: 1rem;
+	    padding: 10px;
+	    height: 40px;
+	    width: 100px;
+	    border-radius: 0.3em;  
+	}
+
+	.newsletter p {
+	    margin-bottom: .8rem;
+	    font-size: 1em;
+	    padding: 0px 20px 0px 20px;
+	}
+
+	ul.social-media-footer {
+		list-style-type: none;
+		margin-left: -30px;
+	}
+
+	ul.social-media-footer li {
+		padding: 20px 10px 20px 10px;
+	}
+
+	ul.social-media-footer a {
+		display: block;
+	}
+
+	.footer-links-wrapper {
+	    margin: 10px 0px 2px 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+	ul.footer-links {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	ul.footer-links li {
+		display: block;
+		padding: 20px 20px 20px 20px;
+	}
+
+	ul.footer-links a {
+		font-size: 1.2em;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.copyright {
+	    margin: 10px 0px 20px 37px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up)  Query reference from w3c schools*/  
+@media screen and (min-width: 1305px) {
+	footer {
+	 	display: inline-block;
+	 	background: #D64C31;
+	 	padding-top: 1rem;
+	}
+
+	.footer-elements-wrapper {
+	 	box-sizing: border-box;
+	 }
+
+	.inner-wrapper {
+		display: block;
+		position: relative;
+	    margin-left: 20px;
+	}
+
+	.footer-logo-juno {
+		width: 204px;
+	    padding-left: 20px;
+	}
+
+	.inner-wrapper h3{
+		color: #FFFFFF;
+		font-size: 30px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		margin: 20px 0px 10px 20px;
+	}
+
+	.inner-wrapper span {
+		color: #FFFFFF;
+		font-family: 'Montserrat', sans-serif;
+	    font-size: 1em;
+	    line-height: 1em;
+	    margin: 10px 0px 20px 20px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+	.newsletter {
+		display: flex;
+		display: -webkit-box;
+	  	display: -moz-box;
+	  	display: -ms-flexbox;
+	  	display: -webkit-flex;
+		flex-direction: column;
+		-webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+		background: #4A455C;
+	    padding: 20px 10px 31px 10px;
+	    position: absolute;
+	    top: -35px;
+	    right: 4%;
+	    z-index: 1;
+	}
+
+	h3.mailing {
+		color: #FFFFFF;
+		font-size: 30px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		margin: 0px 0px 20px 20px;
+	}
+
+	.newsletter form {
+		display: flex;
+		display: -webkit-box;
+	  	display: -moz-box;
+	  	display: -ms-flexbox;
+	  	display: -webkit-flex;
+		flex-direction: column;
+		-webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+		padding: 0px 20px 0px 20px;
+	}
+
+	.newsletter input {
+	    margin-bottom: 0.5rem;
+	    font-family: 'Montserrat', sans-serif;
+	    font-size: 1rem;
+	    line-height: 1.8rem;
+	    padding: 0.5rem;
+	    border: none;
+	    border-radius: 0.3em;
+	}
+
+	.newsletter button {
+	    display: inline-flex;
+	    justify-content: center;
+	    -webkit-justify-content: center;
+	    align-items: center;
+	    -webkit-box-align: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+	    cursor: pointer;
+	    text-decoration: none;
+	    font-family: 'Montserrat', sans-serif;
+	    font-size: 1rem;
+	    padding: 10px;
+	    height: 40px;
+	    width: 100px;
+	    background: #FFF0E7;
+	    border-radius: 0.3em;  
+	}
+
+	.newsletter button:hover {
+		background: #D64C31;
+		color: white;
+	}
+
+	.newsletter p {
+		display: flex;
+		display: -webkit-box;
+	  	display: -moz-box;
+	  	display: -ms-flexbox;
+	  	display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+		color: #FFFFFF;
+	    margin-bottom: .8rem;
+	    font-family: 'Montserrat', sans-serif;
+	    font-size: 1em;
+	    padding: 0px 20px 0px 20px;
+	}
+
+	ul.social-media-footer {
+		list-style-type: none;
+		margin-left: -30px;
+	}
+
+	ul.social-media-footer li {
+		display: inline-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+		padding: 20px 10px 20px 10px;
+		justify-content: flex-start;
+		-webkit-justify-content: flex-start;
+		-webkit-align-items: flex-start;
+	    align-items: flex-start;
+	    -webkit-box-align: start;
+		-moz-box-align: start;
+		-ms-flex-align: start;
+		-webkit-align-items: start;
+	}
+
+	ul.social-media-footer a {
+		display: block;
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	ul.social-media-footer a:hover {
+		color: #D64C31;
+	}
+
+	.footer-links-wrapper {
+	    margin: 10px 0px 2px 20px;
+	    width: 50%;
+	    text-align: left;
+	}
+
+	ul.footer-links {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	ul.footer-links li {
+		display: inline-block;
+		padding: 20px 20px 20px 20px;
 		justify-content: center;
 		-webkit-justify-content: center;
 	    align-items: center;
@@ -715,25 +1546,29 @@ ul.footer-links a {
 		-webkit-align-items: center;
 	}
 
+	ul.footer-links a {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.2em;
+		color: #FFFFFF;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	ul.footer-links a:hover {
+		background: white;
+		color: #D64C31;
+	}
+
 	.copyright {
-		margin: 0px 0px 10px 20px;
-    	padding-top: 10px;
-    	padding-bottom: 0px;
-    	width: 100%;
+		color: #FFFFFF;
+		font-family: 'Montserrat', sans-serif;
+	    font-size: 1em;
+	    line-height: 1em;
+	    margin: 10px 0px 20px 37px;
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	    width: 50%;
+	    text-align: left;
 	}
-
 }
-
-/*@media screen and (min-width:750px) and (max-width: 1140px) {
-	.inner-wrapper {
-		display: inline-block;
-		position: relative;
-    	margin-left: 20px;
-	}
-	.newsletter {
-		position: initial;
-	}
-
-}*/
-
 
